@@ -1,35 +1,26 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from "react";
+import SalesDashboard from "./pages/SalesDashboard";
+// Note: If you choose to use React Router for future features,
+// the <SalesDashboard /> would be wrapped in a <Route> here.
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div className="app-container">
+      <header className="app-header">
+        <h1>TruEstate Sales Manager</h1>
+        <p>Advanced Search, Filter, Sort, and Pagination Demo</p>
+      </header>
+
+      <main className="app-main-content">
+        {/* The main dashboard component that handles all the logic and UI */}
+        <SalesDashboard />
+      </main>
+
+      <footer className="app-footer">
+        &copy; {new Date().getFullYear()} TruEstate Assignment
+      </footer>
+    </div>
+  );
 }
 
-export default App
+export default App;
