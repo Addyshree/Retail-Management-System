@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback } from "react";
 import axios from "axios";
 
-const API_BASE_URL = "http://localhost:5000/api/sales";
+const API_BASE_URL = "https://retail-management-system-4-th7k.onrender.com/";
 
 export const useSalesData = () => {
   const [data, setData] = useState([]);
